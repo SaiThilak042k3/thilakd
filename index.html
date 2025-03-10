@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en" class="light-mode">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thilak Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">Thilak<span class="logo-dot"></span></div>
+      <div class="nav-controls">
+        <div class="theme-toggle" id="theme-toggle">
+          <i class="fas fa-sun"></i>
+          <i class="fas fa-moon"></i>
+          <div class="toggle-ball"></div>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#timeline" class="nav-link">Timeline</a></li>
+        <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="glitch" data-text="Thilak">Thilak</h1>
+          <div class="dynamic-text">
+            <span>AI Engineer</span>
+            <span>NLP Specialist</span>
+            <span>Web Developer</span>
+            <span>Tech Innovator</span>
+          </div>
+          <p>Building intelligent solutions with cutting-edge technology</p>
+          <div class="hero-cta">
+            <a href="#" class="btn btn-primary">Hire Me</a>
+            <a href="#projects" class="btn btn-outline">View Projects</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="tech-circle"></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">About Me</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p>I'm a passionate tech professional specializing in AI, NLP, and web development. With a focus on creating innovative solutions, I combine technical expertise with creative problem-solving to deliver exceptional results.</p>
+          <a href="#" class="btn btn-small">Download Resume</a>
+        </div>
+        <div class="about-image">
+          <img src="src\img\Passport_Photograph.jpg" alt="Thilak">
+          <div class="image-backdrop"></div>
+        </div>
+      </div>
+      
+      <div class="skills-section">
+        <h3>My Skills</h3>
+        <div class="skills-container">
+          <div class="skills-scroll">
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fas fa-brain"></i>
+              </div>
+              <h4>Artificial Intelligence</h4>
+              <p>Machine learning, deep learning, and AI application development</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fas fa-comment-dots"></i>
+              </div>
+              <h4>NLP</h4>
+              <p>Natural language processing, text analysis, and conversational AI</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fas fa-project-diagram"></i>
+              </div>
+              <h4>Knowledge Graphs</h4>
+              <p>Building and utilizing knowledge graphs for data representation</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fas fa-cogs"></i>
+              </div>
+              <h4>Automation</h4>
+              <p>Process automation and workflow optimization</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fas fa-video"></i>
+              </div>
+              <h4>Video Editing</h4>
+              <p>Creative video production and post-processing</p>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <h4>Web Development</h4>
+              <p>Full-stack development with modern frameworks and technologies</p>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <div class="scroll-arrow">
+            <i class="fas fa-chevron-left"></i>
+          </div>
+          <div class="scroll-text">Scroll</div>
+          <div class="scroll-arrow">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Projects</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-container">
+        <div class="projects-scroll">
+          <div class="project-card" data-project="project1">
+            <div class="project-image">
+              <img src="/placeholder.svg?height=300&width=500" alt="AI Chatbot">
+              <div class="project-overlay">
+                <div class="project-category">AI</div>
+                <button class="btn btn-small btn-view">View Project</button>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>AI Chatbot Platform</h3>
+              <div class="project-tech">
+                <span>Python</span>
+                <span>TensorFlow</span>
+                <span>React</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-project="project2">
+            <div class="project-image">
+              <img src="/placeholder.svg?height=300&width=500" alt="Knowledge Graph">
+              <div class="project-overlay">
+                <div class="project-category">Data</div>
+                <button class="btn btn-small btn-view">View Project</button>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Enterprise Knowledge Graph</h3>
+              <div class="project-tech">
+                <span>Neo4j</span>
+                <span>Python</span>
+                <span>D3.js</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-project="project3">
+            <div class="project-image">
+              <img src="src\img\gallery\monoacting.png" alt="Automation System">
+              <div class="project-overlay">
+                <div class="project-category">Automation</div>
+                <button class="btn btn-small btn-view">View Project</button>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Workflow Automation System</h3>
+              <div class="project-tech">
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>MongoDB</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-project="project4">
+            <div class="project-image">
+              <img src="/placeholder.svg?height=300&width=500" alt="Video Platform">
+              <div class="project-overlay">
+                <div class="project-category">Media</div>
+                <button class="btn btn-small btn-view">View Project</button>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Interactive Video Platform</h3>
+              <div class="project-tech">
+                <span>React</span>
+                <span>FFmpeg</span>
+                <span>AWS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-project="project5">
+            <div class="project-image">
+              <img src="/placeholder.svg?height=300&width=500" alt="NLP Tool">
+              <div class="project-overlay">
+                <div class="project-category">NLP</div>
+                <button class="btn btn-small btn-view">View Project</button>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Sentiment Analysis Tool</h3>
+              <div class="project-tech">
+                <span>Python</span>
+                <span>BERT</span>
+                <span>Flask</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card" data-project="project6">
+            <div class="project-image">
+              <img src="/placeholder.svg?height=300&width=500" alt="Web App">
+              <div class="project-overlay">
+                <div class="project-category">Web</div>
+                <button class="btn btn-small btn-view">View Project</button>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Resume Builder Platform</h3>
+              <div class="project-tech">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-arrow">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="scroll-text">Scroll</div>
+        <div class="scroll-arrow">
+          <i class="fas fa-chevron-right"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Modal -->
+    <div class="modal" id="project-modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-body">
+          <!-- Content will be dynamically inserted here -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Gallery</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="gallery-container">
+        <div class="gallery-scroll">
+          <div class="gallery-item" data-description=" Won the House Championship (2024-25) at the Sri Sathya Sai Annual Sports & Cultural Meet as House Captain.">
+            <img src="src\img\gallery\ashwa.png" alt="Championship">
+          </div>
+          <div class="gallery-item" data-description="Manoacting Competition winner">
+            <img src="src\img\gallery\monoacting.png" alt="acting">
+          </div>
+          <div class="gallery-item" data-description="Collaborating with team members on a knowledge graph project.">
+            <img src="/placeholder.svg?height=300&width=300" alt="Team Collaboration">
+          </div>
+          <div class="gallery-item" data-description="Setting up automation workflows for a client project.">
+            <img src="/placeholder.svg?height=300&width=300" alt="Automation Setup">
+          </div>
+          <div class="gallery-item" data-description="Video editing session for a promotional tech video.">
+            <img src="/placeholder.svg?height=300&width=300" alt="Video Editing">
+          </div>
+          <div class="gallery-item" data-description="Coding a responsive web application interface.">
+            <img src="/placeholder.svg?height=300&width=300" alt="Web Development">
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-arrow">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="scroll-text">Scroll</div>
+        <div class="scroll-arrow">
+          <i class="fas fa-chevron-right"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Modal -->
+    <div class="modal" id="gallery-modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-body">
+          <img src="/placeholder.svg" alt="" id="modal-image">
+          <p id="modal-description"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section id="timeline" class="timeline">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">My Journey</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="timeline-container">
+        <div class="timeline-line"></div>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2023</div>
+          <div class="timeline-content">
+            <h3>Senior AI Engineer</h3>
+            <p>Led the development of an enterprise-grade NLP platform that improved customer service efficiency by 40%.</p>
+            <div class="timeline-tags">
+              <span>AI</span>
+              <span>Leadership</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2022</div>
+          <div class="timeline-content">
+            <h3>Knowledge Graph Project</h3>
+            <p>Designed and implemented a knowledge graph system that connected disparate data sources for a Fortune 500 company.</p>
+            <div class="timeline-tags">
+              <span>Data</span>
+              <span>Innovation</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2021</div>
+          <div class="timeline-content">
+            <h3>AI Engineer</h3>
+            <p>Developed machine learning models for predictive analytics that increased business insights by 35%.</p>
+            <div class="timeline-tags">
+              <span>ML</span>
+              <span>Analytics</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2020</div>
+          <div class="timeline-content">
+            <h3>Web Development Lead</h3>
+            <p>Led a team of developers to create responsive, high-performance web applications for clients across industries.</p>
+            <div class="timeline-tags">
+              <span>Web</span>
+              <span>Leadership</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2019</div>
+          <div class="timeline-content">
+            <h3>Automation Specialist</h3>
+            <p>Created workflow automation solutions that reduced manual processes by 60% for enterprise clients.</p>
+            <div class="timeline-tags">
+              <span>Automation</span>
+              <span>Efficiency</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Testimonials</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="testimonials-container">
+        <div class="testimonial-slider">
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p>"Thilak's expertise in AI and machine learning transformed our customer service operations. His innovative solutions reduced response times by 50% while improving accuracy."</p>
+              <div class="testimonial-author">
+                <div class="author-image">
+                  <img src="/placeholder.svg?height=100&width=100" alt="John Smith">
+                </div>
+                <div class="author-info">
+                  <h4>John Smith</h4>
+                  <p>CTO, Tech Innovations Inc.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p>"Thanks to Thilak's resume building service, I landed my dream job at a top tech company. His attention to detail and understanding of what employers look for made all the difference."</p>
+              <div class="testimonial-author">
+                <div class="author-image">
+                  <img src="/placeholder.svg?height=100&width=100" alt="Sarah Johnson">
+                </div>
+                <div class="author-info">
+                  <h4>Sarah Johnson</h4>
+                  <p>Software Engineer, Google</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p>"Working with Thilak on our knowledge graph project was a game-changer. His technical expertise combined with his ability to explain complex concepts made the implementation smooth and successful."</p>
+              <div class="testimonial-author">
+                <div class="author-image">
+                  <img src="/placeholder.svg?height=100&width=100" alt="Michael Chen">
+                </div>
+                <div class="author-info">
+                  <h4>Michael Chen</h4>
+                  <p>Data Science Director, DataCorp</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-slide">
+            <div class="testimonial-content">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p>"Thilak's resume service helped me transition from academia to industry. Within two weeks of updating my resume, I received multiple interview offers from top companies."</p>
+              <div class="testimonial-author">
+                <div class="author-image">
+                  <img src="/placeholder.svg?height=100&width=100" alt="Emily Rodriguez">
+                </div>
+                <div class="author-info">
+                  <h4>Emily Rodriguez</h4>
+                  <p>Data Scientist, AI Solutions</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-controls">
+          <button class="testimonial-btn prev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="testimonial-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <button class="testimonial-btn next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hire Me Section -->
+  <section id="hire-me" class="hire-me">
+    <div class="container">
+      <div class="hire-me-content">
+        <h2>Ready to work together?</h2>
+        <p>Let's collaborate on your next project and create something amazing.</p>
+        <a href="#" class="btn btn-primary btn-large">Hire Me</a>
+      </div>
+    </div>
+    <div class="hire-me-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-content">
+        <div class="contact-text">
+          <p>Feel free to reach out through any of these platforms. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-link">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-twitter"></i>
+            <span>Twitter</span>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">Thilak<span class="logo-dot">.</span></div>
+        <p>&copy; 2025 Thilak. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Data (for modal content) -->
+  <div id="project-data" style="display: none;">
+    <div id="project1">
+      <h3>AI Chatbot Platform</h3>
+      <img src="/placeholder.svg?height=400&width=700" alt="AI Chatbot">
+      <div class="project-details">
+        <p>An advanced conversational AI system that leverages natural language processing to provide intelligent responses and assist users across multiple domains. The platform includes sentiment analysis, intent recognition, and contextual understanding.</p>
+        <h4>Key Features:</h4>
+        <ul>
+          <li>Multi-language support with real-time translation</li>
+          <li>Context-aware conversation management</li>
+          <li>Integration with knowledge bases and APIs</li>
+          <li>Customizable personality and response styles</li>
+        </ul>
+        <h4>Technologies Used:</h4>
+        <div class="tech-stack">
+          <span>Python</span>
+          <span>TensorFlow</span>
+          <span>BERT</span>
+          <span>React</span>
+          <span>Node.js</span>
+          <span>MongoDB</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="btn btn-small">Live Demo</a>
+          <a href="#" class="btn btn-small btn-outline">GitHub</a>
+        </div>
+      </div>
+    </div>
+    
+    <div id="project2">
+      <h3>Enterprise Knowledge Graph</h3>
+      <img src="/placeholder.svg?height=400&width=700" alt="Knowledge Graph">
+      <div class="project-details">
+        <p>A comprehensive knowledge graph solution that maps relationships between entities within an organization. This system enables advanced data discovery, improves search capabilities, and provides insights through connected data visualization.</p>
+        <h4>Key Features:</h4>
+        <ul>
+          <li>Automated entity extraction and relationship mapping</li>
+          <li>Interactive visualization dashboard</li>
+          <li>Semantic search capabilities</li>
+          <li>API for integration with existing systems</li>
+        </ul>
+        <h4>Technologies Used:</h4>
+        <div class="tech-stack">
+          <span>Neo4j</span>
+          <span>Python</span>
+          <span>SpaCy</span>
+          <span>D3.js</span>
+          <span>GraphQL</span>
+          <span>React</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="btn btn-small">Live Demo</a>
+          <a href="#" class="btn btn-small btn-outline">GitHub</a>
+        </div>
+      </div>
+    </div>
+    
+    <div id="project3">
+      <h3>Workflow Automation System</h3>
+      <img src="/placeholder.svg?height=400&width=700" alt="Automation System">
+      <div class="project-details">
+        <p>An end-to-end process automation solution that streamlines repetitive tasks and workflows. The system includes visual workflow builders, integration with popular services, and comprehensive monitoring dashboards.</p>
+        <h4>Key Features:</h4>
+        <ul>
+          <li>Drag-and-drop workflow designer</li>
+          <li>Conditional logic and branching</li>
+          <li>Scheduled and event-triggered automation</li>
+          <li>Performance analytics and reporting</li>
+        </ul>
+        <h4>Technologies Used:</h4>
+        <div class="tech-stack">
+          <span>Node.js</span>
+          <span>Express</span>
+          <span>MongoDB</span>
+          <span>React</span>
+          <span>Redux</span>
+          <span>Docker</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="btn btn-small">Live Demo</a>
+          <a href="#" class="btn btn-small btn-outline">GitHub</a>
+        </div>
+      </div>
+    </div>
+    
+    <div id="project4">
+      <h3>Interactive Video Platform</h3>
+      <img src="/placeholder.svg?height=400&width=700" alt="Video Platform">
+      <div class="project-details">
+        <p>A custom video editing and sharing platform that allows users to create, edit, and share interactive video content. The platform includes real-time collaboration features and advanced editing capabilities.</p>
+        <h4>Key Features:</h4>
+        <ul>
+          <li>Browser-based video editing</li>
+          <li>Interactive elements and hotspots</li>
+          <li>Collaborative editing in real-time</li>
+          <li>Analytics and viewer engagement metrics</li>
+        </ul>
+        <h4>Technologies Used:</h4>
+        <div class="tech-stack">
+          <span>React</span>
+          <span>FFmpeg</span>
+          <span>WebRTC</span>
+          <span>AWS S3</span>
+          <span>Node.js</span>
+          <span>Socket.io</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="btn btn-small">Live Demo</a>
+          <a href="#" class="btn btn-small btn-outline">GitHub</a>
+        </div>
+      </div>
+    </div>
+    
+    <div id="project5">
+      <h3>Sentiment Analysis Tool</h3>
+      <img src="/placeholder.svg?height=400&width=700" alt="NLP Tool">
+      <div class="project-details">
+        <p>A powerful sentiment analysis tool that processes text data to determine emotional tone and intent. Used by businesses to analyze customer feedback, social media mentions, and product reviews.</p>
+        <h4>Key Features:</h4>
+        <ul>
+          <li>Real-time sentiment scoring</li>
+          <li>Multi-language support</li>
+          <li>Customizable sentiment categories</li>
+          <li>Visualization dashboard for trends</li>
+        </ul>
+        <h4>Technologies Used:</h4>
+        <div class="tech-stack">
+          <span>Python</span>
+          <span>BERT</span>
+          <span>Flask</span>
+          <span>React</span>
+          <span>D3.js</span>
+          <span>PostgreSQL</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="btn btn-small">Live Demo</a>
+          <a href="#" class="btn btn-small btn-outline">GitHub</a>
+        </div>
+      </div>
+    </div>
+    
+    <div id="project6">
+      <h3>Resume Builder Platform</h3>
+      <img src="/placeholder.svg?height=400&width=700" alt="Web App">
+      <div class="project-details">
+        <p>A comprehensive resume building platform that helps job seekers create professional, ATS-friendly resumes. This platform uses AI to suggest improvements, optimize keyword placement, and generate tailored content based on job descriptions.
+
+        <h4>Key Features:</h4>
+        <ul>
+          <li>AI-powered content suggestions</li>
+          <li>ATS optimization analysis</li>
+          <li>Multiple template designs</li>
+          <li>One-click job application integration</li>
+        </ul>
+        <h4>Technologies Used:</h4>
+        <div class="tech-stack">
+          <span>React</span>
+          <span>Node.js</span>
+          <span>MongoDB</span>
+          <span>GPT-3</span>
+          <span>Express</span>
+          <span>AWS</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="btn btn-small">Live Demo</a>
+          <a href="#" class="btn btn-small btn-outline">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

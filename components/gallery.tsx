@@ -13,7 +13,7 @@ const galleryItems = [
   },
   {
     id: 2,
-    image: "thilakd\src\img\gallery\monoacting.png",
+    image: "src/img/gallery/monoacting.png",
     title: "Monoacting Competition",
     description: "Manoacting Competition winner",
   },

@@ -108,7 +108,7 @@ export default function Gallery() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="gallery-item"
             >
-              <img src={item.image || "/placeholder.svg"} alt={item.title} className="gallery-image" />
+              <img src={item.image } alt={item.title} className="gallery-image" />
               <div className="gallery-overlay">
                 <h3 className="gallery-title">{item.title}</h3>
                 <p className="gallery-description">{item.description}</p>

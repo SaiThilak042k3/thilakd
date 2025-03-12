@@ -31,22 +31,22 @@ const testimonials = [
     position: "State Youtube coordinator, Sri Sathya Sai Balvikas",
     avatar: "src/img/gallery/author/preethi.png",
   },
-  {
-    id: 4,
-    content:
-      "Thilak was a huge help in shaping my resume! His advice on highlighting key skills and structuring it properly made a big difference. Thanks to him, I landed my role at Hexaware with confidence!",
-    author: "Sai",
-    position: "Service Desk Analyst, Hexaware, Chennai",
-    avatar: "src/img/gallery/author/sai.jpg",
-  },
-  {
-    id: 5,
-    content:
-      "I can't thank Thilak enough for his guidance on my resume. He made sure it was polished and job-ready, which played a huge role in me securing my job at State Street",
-    author: "Priya Dharshiny",
-    position: "Senior Data Analyst, StateStreet, Coimbatore",
-    avatar: "src/img/gallery/author/priya.jpg",
-  },
+  // {
+  //   id: 4,
+  //   content:
+  //     "Thilak was a huge help in shaping my resume! His advice on highlighting key skills and structuring it properly made a big difference. Thanks to him, I landed my role at Hexaware with confidence!",
+  //   author: "Sai",
+  //   position: "Service Desk Analyst, Hexaware, Chennai",
+  //   avatar: "src/img/gallery/author/sai.jpg",
+  // },
+  // {
+  //   id: 5,
+  //   content:
+  //     "I can't thank Thilak enough for his guidance on my resume. He made sure it was polished and job-ready, which played a huge role in me securing my job at State Street",
+  //   author: "Priya Dharshiny",
+  //   position: "Senior Data Analyst, StateStreet, Coimbatore",
+  //   avatar: "src/img/gallery/author/priya.jpg",
+  // },
 ]
 
 export default function Testimonials() {

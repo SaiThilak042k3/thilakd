@@ -116,7 +116,7 @@ export default function Home() {
     <div ref={containerRef} className="min-h-screen bg-background font-grotesk relative">
       <Head>
         <title>Thilak - AI Engineer & NLP Specialist</title>
-        <link rel="icon" href="thilakd\src\img\favicon.ico" />
+        <link rel="icon" href="src/img/favicon.ico"/>
       </Head>
 
       <motion.div className="progress-bar" style={{ scaleX: scrollYProgress }} />

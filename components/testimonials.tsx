@@ -13,7 +13,7 @@ const testimonials = [
       "Thilak's conduct, professionalism, and performance during his internship at SAIMA Labs were truly exceptional. His excellence in execution, strong values, and technical expertise earned him the title of Best Intern 2024.",
     author: "Dr. Karthik Ramesh",
     position: "Chief Transformation & Innovation Officer UBM Abu Dhabi",
-    avatar: "/placeholder.svg?height=100&width=100",
+    avatar: "src/img/gallery/author/DR.KR.jpeg",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const testimonials = [
       "During the entire span of training, he was an excellent team player, exhibited good inter personal skills and his performance exceeded expectations. He was able to deliver good quality work within the allocated time.",
     author: "Suresh",
     position: "State President, Sri Sathya Sai Seva Organisation",
-    avatar: "/placeholder.svg?height=100&width=100",
+    avatar: "src/img/gallery/author/suresh.png",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const testimonials = [
       "Thilak's video editing and YouTube management brought a whole new level of fun and engagement to our kids' content! His keen eye for detail and ability to organize playlists seamlessly made it easy for viewers to navigate and enjoy.",
     author: "Preethi",
     position: "State Youtube coordinator, Sri Sathya Sai Balvikas",
-    avatar: "/placeholder.svg?height=100&width=100",
+    avatar: "src/img/gallery/author/preethi.png",
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const testimonials = [
       "Thilak was a huge help in shaping my resume! His advice on highlighting key skills and structuring it properly made a big difference. Thanks to him, I landed my role at Hexaware with confidence!",
     author: "Sai",
     position: "Service Desk Analyst, Hexaware, Chennai",
-    avatar: "/placeholder.svg?height=100&width=100",
+    avatar: "src/img/gallery/author/sai.jpg",
   },
   {
     id: 5,
@@ -45,7 +45,7 @@ const testimonials = [
       "I can't thank Thilak enough for his guidance on my resume. He made sure it was polished and job-ready, which played a huge role in me securing my job at State Street",
     author: "Priya Dharshiny",
     position: "Senior Data Analyst, StateStreet, Coimbatore",
-    avatar: "/placeholder.svg?height=100&width=100",
+    avatar: "src/img/gallery/author/priya.jpg",
   },
 ]
 

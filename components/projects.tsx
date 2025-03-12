@@ -20,7 +20,7 @@ const projects = [
     id: "project1",
     title: "Hybrid RAG",
     category: "NLP",
-    image: "/placeholder.svg?height=300&width=500",
+    image: "thilakd\src\img\gallery\projects\full workflow.png",
     tech: ["Neo4j", "TensorFlow", "Knowledge Graph"],
     description:
       "A retrieval-augmented generation system combining structured and unstructured data using Knowledge Graphs and Vector Databases.",
@@ -41,7 +41,7 @@ const projects = [
     id: "project2",
     title: "Job Algorithm",
     category: "Automation",
-    image: "/placeholder.svg?height=300&width=500",
+    image: "thilakd\src\img\gallery\projects\RPA.png",
     tech: ["RPA", "Selenium", "Vector Database"],
     description:
       "Automating LinkedIn job recommendations using Robotic Process Automation and NLP-based skill matching.",
@@ -63,7 +63,7 @@ const projects = [
     id: "project3",
     title: "SAAVAAD",
     category: "Web Development",
-    image: "/placeholder.svg?height=300&width=500",
+    image: "thilakd\src\img\gallery\projects\SAAVAAD1.png",
     tech: ["Node.js", "ML Models", "MongoDB", "React Native"],
     description: "A cross-platform mobile app for text summarization and language translation with ML models.",
     details: {
@@ -83,7 +83,7 @@ const projects = [
     id: "project4",
     title: "Video Editing",
     category: "Media",
-    image: "/placeholder.svg?height=300&width=500",
+    image: "thilakd\src\img\gallery\projects\editing.png",
     tech: ["Davinci", "Adobe"],
     description: "Freelance video editing for educational content and YouTube creators.",
     details: {
@@ -102,7 +102,7 @@ const projects = [
     id: "project5",
     title: "Multi-language Support",
     category: "Web Development",
-    image: "/placeholder.svg?height=300&width=500",
+    image: "thilakd\src\img\gallery\projects\web.png",
     tech: ["WordPress"],
     description: "Developed a multilingual website with dynamic content translation for global accessibility.",
     details: {

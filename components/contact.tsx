@@ -16,25 +16,25 @@ const socialLinks = [
   {
     name: "GitHub",
     icon: Github,
-    url: "#",
+    url: "https://github.com/SaiThilak042k3",
     color: "bg-gray-500/10 text-gray-500 hover:bg-gray-700 hover:text-white",
   },
   {
     name: "Email",
     icon: Mail,
-    url: "mailto:example@example.com",
+    url: "mailto:saithilak04@example.com",
     color: "bg-red-500/10 text-red-500 hover:bg-red-500 hover:text-white",
   },
   {
     name: "WhatsApp",
     icon: Phone,
-    url: "https://wa.me/1234567890",
+    url: "https://wa.me/6369502212",
     color: "bg-green-500/10 text-green-500 hover:bg-green-500 hover:text-white",
   },
   {
     name: "Instagram",
     icon: Instagram,
-    url: "https://www.instagram.com/",
+    url: "https://www.instagram.com/thilak_sai_",
     color: "bg-pink-500/10 text-pink-500 hover:bg-pink-500 hover:text-white",
   },
 ]

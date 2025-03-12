@@ -103,7 +103,7 @@ export default function Hero() {
                 variant="outline"
                 className="rounded-full bg-blue-500/10 hover:bg-blue-500/20 border-blue-500/20 text-blue-500"
               >
-                <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://cal.com/thilak-d" target="_blank" rel="noopener noreferrer">
                   <Calendar className="mr-2 h-4 w-4" />
                   Book a Call
                 </a>

@@ -8,7 +8,7 @@ const timelineItems = [
     title: "President",
     organization: "Digital Enlightment Club, SSSIHL",
     tags: ["Microsoft", "Leadership"],
-    image: "/placeholder.svg?height=200&width=300",
+    image: "thilakd\src\img\gallery\timeline\DEC.png",
     description:
       "Leading the Digital Enlightment Club to promote technology awareness and digital literacy among students.",
   },
@@ -17,7 +17,7 @@ const timelineItems = [
     title: "CO-Founder and member",
     organization: "Eco-Einstiens Club, SSSIHL",
     tags: ["Green Campus", "Leadership"],
-    image: "/placeholder.svg?height=200&width=300",
+    image: "thilakd\src\img\gallery\eco.png",
     description:
       "Co-founded the Eco-Einstiens Club to promote environmental awareness and sustainability initiatives on campus.",
   },
@@ -26,7 +26,7 @@ const timelineItems = [
     title: "MSc Data Science and Computing",
     organization: "Sri Sathya Sai Institute of Higher Learning",
     tags: ["AI", "ML"],
-    image: "/placeholder.svg?height=200&width=300",
+    image: "thilakd\src\img\gallery\timeline\SSSIHL.jpg",
     description: "Pursuing Master's degree with focus on AI, Machine Learning, and Data Science applications.",
   },
   {
@@ -34,7 +34,7 @@ const timelineItems = [
     title: "Data Analyst Intern",
     organization: "TaskBench, SAIMA Labs",
     tags: ["ML", "Analytics"],
-    image: "/placeholder.svg?height=200&width=300",
+    image: "thilakd\src\img\gallery\timeline\taskbench.png",
     description:
       "Conducted market research and built predictive models, improving efficiency using Python and data analysis techniques.",
   },
@@ -43,7 +43,7 @@ const timelineItems = [
     title: "Web Development",
     organization: "Sri Sathya Sai Seva Organizations, TN",
     tags: ["Web", "Leadership"],
-    image: "/placeholder.svg?height=200&width=300",
+    image: "thilakd\src\img\gallery\timeline\balvikas.png",
     description:
       "Designed and developed websites, improving online visibility and user experience for the organization.",
   },
@@ -52,7 +52,7 @@ const timelineItems = [
     title: "BSc Computer Science",
     organization: "Sri Sathya Sai Institute of Higher Learning",
     tags: ["Python", "Data"],
-    image: "/placeholder.svg?height=200&width=300",
+    image: "thilakd\src\img\gallery\timeline\SSSIHL.jpg",
     description:
       "Completed Bachelor's degree with focus on programming, data structures, and computer science fundamentals.",
   },

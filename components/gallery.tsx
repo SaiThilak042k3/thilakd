@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 const galleryItems = [
   {
     id: 1,
-    image: "/ashwa.png",
+    image: "src/img/gallery/ashwa.png",
     title: "Championship",
     description:
       "Won the House Championship (2024-25) at the Sri Sathya Sai Annual Sports & Cultural Meet as House Captain.",
@@ -19,25 +19,25 @@ const galleryItems = [
   },
   {
     id: 3,
-    image: "thilakd\src\img\gallery\ACE_HouseDrama.JPG",
+    image: "src/img/gallery/ACE_HouseDrama.JPG",
     title: "House Drama",
     description: "House ASHWA (Drama Competition)",
   },
   {
     id: 4,
-    image: "thilakd\src\img\gallery\investiture.JPG",
+    image: "src/img/gallery/investiture.JPG",
     title: "Investiture Function",
     description: "Investiture function",
   },
   {
     id: 5,
-    image: "thilakd\src\img\gallery\ST.jpg",
+    image: "src/img/gallery/ST.jpg",
     title: "DEC Activity",
     description: "Service activity at nearby school as part of digital Enlightment Club",
   },
   {
     id: 6,
-    image: "thilakd\src\img\gallery\eco.png",
+    image: "src/img/gallery/eco.png",
     title: "Eco-Einstiens Club",
     description: "Eco-Einstiens Club Activities",
   },

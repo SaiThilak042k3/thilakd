@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 const galleryItems = [
   {
     id: 1,
-    image: "thilakd/public/ashwa.png",
+    image: "/ashwa.png",
     title: "Championship",
     description:
       "Won the House Championship (2024-25) at the Sri Sathya Sai Annual Sports & Cultural Meet as House Captain.",
@@ -108,7 +108,7 @@ export default function Gallery() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="gallery-item"
             >
-              <img src={item.image } alt={item.title} className="gallery-image" />
+              <img src={item.image || "/placeholder.svg"} alt={item.title} className="gallery-image" />
               <div className="gallery-overlay">
                 <h3 className="gallery-title">{item.title}</h3>
                 <p className="gallery-description">{item.description}</p>

@@ -46,7 +46,7 @@ export default function About() {
             className="relative"
           >
             <div className="relative z-10 rounded-lg overflow-hidden shadow-xl max-w-xs mx-auto">
-              <img src="thilakd\src\img\Passport_Photograph.jpg" alt="Thilak" className="w-full h-auto object-cover" />
+              <img src="thilakd\public\src\img\Passport_Photograph.jpg" alt="Thilak" className="w-full h-auto object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
                 <h3 className="text-white font-semibold">Thilak</h3>
                 <p className="text-white/80 text-sm">AI Engineer & NLP Specialist</p>

@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 const galleryItems = [
   {
     id: 1,
-    image: "thilakd\src\img\gallery\ashwa.png",
+    image: "thilakd/src/img/gallery/ashwa.png",
     title: "Championship",
     description:
       "Won the House Championship (2024-25) at the Sri Sathya Sai Annual Sports & Cultural Meet as House Captain.",

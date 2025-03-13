@@ -15,6 +15,7 @@ import Footer from "@/components/footer"
 import HireMe from "@/components/hire-me"
 import Head from "next/head"
 import { Loader } from "@/components/loader"
+import { Analytics } from "@vercel/analytics/react"
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)

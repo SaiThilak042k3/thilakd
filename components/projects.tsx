@@ -62,7 +62,7 @@ const projects = [
     id: "project3",
     title: "SAAVAAD",
     category: "Web Development",
-    image: "srcimg/gallery/projects/SAAVAAD1.png",
+    image: "src/img/gallery/projects/SAAVAAD1.png",
     tech: ["Node.js", "ML Models", "MongoDB", "React Native"],
     description: "A cross-platform mobile app for text summarization and language translation with ML models.",
     details: {

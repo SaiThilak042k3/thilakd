@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://your-domain.com"),
+  metadataBase: new URL("https://thilakd.vercel.app/"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://your-domain.com",
+    url: "https://thilakd.vercel.app/",
     title: "Thilak - AI Engineer & NLP Specialist",
     description: "Personal portfolio of Thilak, an AI Engineer and NLP Specialist",
     siteName: "Thilak Portfolio",
@@ -47,8 +47,8 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-icon.png",
+    icon: "/src/img/favicon.ico",
+    apple: "src/img/Passport_Photograph.jpg",
   },
   verification: {
     google: "verification_token",

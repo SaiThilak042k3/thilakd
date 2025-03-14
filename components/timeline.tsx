@@ -36,7 +36,7 @@ const timelineItems = [
     title: "Data Analyst Intern",
     organization: "TaskBench, SAIMA Labs",
     tags: ["ML", "Analytics"],
-    image: "/placeholder.svg?height=200&width=300",
+    image: "src/img/gallery/timeline/taskbench.png",
     description:
       "Conducted market research and built predictive models, improving efficiency using Python and data analysis techniques.",
   },

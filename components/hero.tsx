@@ -103,7 +103,7 @@ export default function Hero() {
                 variant="outline"
                 className="rounded-full bg-accent/10 hover:bg-accent/20 border-accent/20 text-accent-foreground"
               >
-                <a href="https://cal.com/thilak-d target="_blank" rel="noopener noreferrer">
+                <a href="https://cal.com/thilak-d" target="_blank" rel="noopener noreferrer">
                   <Calendar className="mr-2 h-4 w-4" />
                   Book a Call
                 </a>

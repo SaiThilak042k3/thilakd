@@ -101,9 +101,9 @@ export default function Hero() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="rounded-full bg-blue-500/10 hover:bg-blue-500/20 border-blue-500/20 text-blue-500"
+                className="rounded-full bg-accent/10 hover:bg-accent/20 border-accent/20 text-accent-foreground"
               >
-                <a href="https://cal.com/thilak-d" target="_blank" rel="noopener noreferrer">
+                <a href="https://cal.com/thilak-d target="_blank" rel="noopener noreferrer">
                   <Calendar className="mr-2 h-4 w-4" />
                   Book a Call
                 </a>
@@ -120,7 +120,7 @@ export default function Hero() {
             {/* 3D Sphere */}
             <div className="relative w-full h-[500px]">
               <motion.div
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-gradient-to-br from-primary/20 to-blue-500/20"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-gradient-to-br from-primary/20 to-accent/20"
                 animate={{
                   scale: [1, 1.05, 1],
                   rotateZ: [0, 10, 0, -10, 0],
@@ -145,7 +145,7 @@ export default function Hero() {
               />
 
               <motion.div
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full border border-blue-500/20"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full border border-accent/20"
                 animate={{
                   rotateZ: [360, 0],
                 }}
@@ -160,7 +160,7 @@ export default function Hero() {
               {[...Array(5)].map((_, i) => (
                 <motion.div
                   key={i}
-                  className="absolute w-8 h-8 rounded-full bg-gradient-to-br from-primary/80 to-blue-500/80"
+                  className="absolute w-8 h-8 rounded-full bg-gradient-to-br from-primary/80 to-accent/80"
                   style={{
                     top: `${30 + Math.random() * 40}%`,
                     left: `${30 + Math.random() * 40}%`,

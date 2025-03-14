@@ -2,9 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
 import { Github, Linkedin, Mail, Instagram, MapPin, Phone } from "lucide-react"
-import { useEffect, useRef } from "react"
 
 const socialLinks = [
   {
@@ -22,7 +20,7 @@ const socialLinks = [
   {
     name: "Email",
     icon: Mail,
-    url: "mailto:saithilak04@example.com",
+    url: "mailto:saithilak04@gmail.com",
     color: "bg-red-500/10 text-red-500 hover:bg-red-500 hover:text-white",
   },
   {
@@ -40,78 +38,6 @@ const socialLinks = [
 ]
 
 export default function Contact() {
-  const mapRef = useRef(null)
-
-  useEffect(() => {
-    // Initialize Google Maps
-    const initMap = () => {
-      if (!mapRef.current) return
-
-      // Location coordinates for Sri Sathya Sai Institute of Higher Learning
-      const location = { lat: 13.9716, lng: 77.789 }
-
-      const map = new window.google.maps.Map(mapRef.current, {
-        center: location,
-        zoom: 15,
-        styles: [
-          {
-            featureType: "all",
-            elementType: "geometry",
-            stylers: [{ color: "#f5f5f5" }],
-          },
-          {
-            featureType: "all",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#616161" }],
-          },
-          {
-            featureType: "all",
-            elementType: "labels.text.stroke",
-            stylers: [{ color: "#f5f5f5" }],
-          },
-          {
-            featureType: "administrative.land_parcel",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#bdbdbd" }],
-          },
-          {
-            featureType: "water",
-            elementType: "geometry",
-            stylers: [{ color: "#e9e9e9" }],
-          },
-          {
-            featureType: "water",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#9e9e9e" }],
-          },
-        ],
-      })
-
-      // Add marker
-      new window.google.maps.Marker({
-        position: location,
-        map: map,
-        title: "Sri Sathya Sai Institute of Higher Learning",
-      })
-    }
-
-    // Load Google Maps API
-    if (!window.google) {
-      const script = document.createElement("script")
-      script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap`
-      script.async = true
-      script.defer = true
-      window.initMap = initMap
-      document.head.appendChild(script)
-    } else {
-      initMap()
-    }
-
-    return () => {
-      window.initMap = null
-    }
-  }, [])
-
   return (
     <section id="contact" className="py-20 bg-background relative">
       <div className="container mx-auto px-4">
@@ -120,93 +46,81 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <h2 className="section-heading gradient-text">Get In Touch</h2>
           <p className="section-subheading">Let's connect and discuss how we can work together</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="lg:col-span-2"
-          >
-            <div className="space-y-8">
-              <div className="contact-card">
-                <div className="contact-icon">
-                  <MapPin className="h-6 w-6" />
-                </div>
-                <h3 className="contact-title">Location</h3>
-                <p className="contact-text">
-                  Sri Sathya Sai Institute of Higher Learning
-                  <br />
-                  Prasanthi Nilayam, Puttaparthi
-                  <br />
-                  Andhra Pradesh, India
-                </p>
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            {/* Location */}
+            <div className="flex items-center p-4 rounded-lg border border-border bg-card/50">
+              <div className="mr-4 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <MapPin className="h-5 w-5 text-primary" />
               </div>
-
-              <div className="contact-card">
-                <div className="contact-icon">
-                  <Mail className="h-6 w-6" />
-                </div>
-                <h3 className="contact-title">Email</h3>
-                <p className="contact-text">
-                  <a href="mailto:example@example.com" className="hover:text-primary transition-colors">
-                    example@example.com
-                  </a>
-                </p>
-              </div>
-
-              <div className="contact-card">
-                <div className="contact-icon">
-                  <Phone className="h-6 w-6" />
-                </div>
-                <h3 className="contact-title">Phone</h3>
-                <p className="contact-text">
-                  <a href="tel:+1234567890" className="hover:text-primary transition-colors">
-                    +1 (234) 567-890
-                  </a>
-                </p>
+              <div>
+                <h3 className="font-medium mb-1">Location</h3>
+                <p className="text-sm text-muted-foreground">Puttaparthi, Andhra Pradesh</p>
               </div>
             </div>
-          </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="lg:col-span-3"
-          >
-            <Card className="overflow-hidden">
-              <CardContent className="p-0">
-                <div ref={mapRef} className="map-container" />
-              </CardContent>
-            </Card>
-
-            <div className="mt-8">
-              <h3 className="text-xl font-semibold mb-4">Connect with me</h3>
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-                {socialLinks.map((link, index) => (
-                  <Button
-                    key={index}
-                    asChild
-                    variant="outline"
-                    className={`h-auto py-6 flex flex-col items-center gap-3 transition-all ${link.color} border-border hover:scale-105 duration-300`}
-                  >
-                    <a href={link.url} target="_blank" rel="noopener noreferrer">
-                      <link.icon className="h-6 w-6 mb-2" />
-                      <span>{link.name}</span>
-                    </a>
-                  </Button>
-                ))}
+            {/* Email */}
+            <div className="flex items-center p-4 rounded-lg border border-border bg-card/50">
+              <div className="mr-4 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <Mail className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-medium mb-1">Email</h3>
+                <a href="mailto:example@example.com" className="text-sm text-muted-foreground hover:text-primary">
+                  saithilak04@gmail.com
+                </a>
               </div>
             </div>
-          </motion.div>
+
+            {/* Phone/WhatsApp */}
+            <div className="flex items-center p-4 rounded-lg border border-border bg-card/50">
+              <div className="mr-4 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                <Phone className="h-5 w-5 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-medium mb-1">Phone</h3>
+                <a href="tel:+1234567890" className="text-sm text-muted-foreground hover:text-primary">
+                  +91 63695 02212
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Map - Using an iframe for simplicity */}
+          <div className="mb-8 rounded-lg overflow-hidden border border-border h-[300px]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.5392105599757!2d77.81089999999999!3d14.165699999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb14a7e8bffffff%3A0x6146d5b1a9f93c79!2sSri%20Sathya%20Sai%20Institute%20of%20Higher%20Learning!5e0!3m2!1sen!2sin!4v1710323456789!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+          {/* Social Links */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+            {socialLinks.map((link, index) => (
+              <Button
+                key={index}
+                asChild
+                variant="outline"
+                className={`h-12 flex items-center justify-center gap-2 transition-all ${link.color} border-border hover:scale-105 duration-300`}
+              >
+                <a href={link.url} target="_blank" rel="noopener noreferrer">
+                  <link.icon className="h-5 w-5 mr-2" />
+                  <span>{link.name}</span>
+                </a>
+              </Button>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -82,56 +82,68 @@ export default function Experience() {
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-blue-500 mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <Card className="h-full hover:shadow-md transition-all hover:-translate-y-1 border-border relative overflow-hidden">
-                {/* Circuit node decoration */}
-                <div className="absolute top-0 right-0 w-20 h-20">
-                  <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0 H80 M0 20 H60 M20 0 V80" stroke="currentColor" strokeOpacity="0.1" strokeWidth="1" />
-                    <circle cx="20" cy="20" r="3" fill="currentColor" fillOpacity="0.1" />
-                  </svg>
-                </div>
+        <div className="relative">
+          <div className="flex overflow-x-auto hide-scrollbar gap-6 pb-4 pt-4">
+            {experiences.map((exp, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex-shrink-0 w-80"
+              >
+                <Card className="h-full hover:shadow-md transition-all hover:-translate-y-1 border-border relative overflow-hidden">
+                  {/* Circuit node decoration */}
+                  <div className="absolute top-0 right-0 w-20 h-20">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M0 0 H80 M0 20 H60 M20 0 V80"
+                        stroke="currentColor"
+                        strokeOpacity="0.1"
+                        strokeWidth="1"
+                      />
+                      <circle cx="20" cy="20" r="3" fill="currentColor" fillOpacity="0.1" />
+                    </svg>
+                  </div>
 
-                <CardHeader className="pb-2">
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-r from-primary/20 to-blue-500/20 flex items-center justify-center">
-                      <Briefcase className="h-5 w-5 text-primary" />
-                    </div>
-                    <Badge variant="outline" className="bg-blue-500/10 text-blue-500 border-blue-500/20">
-                      Work
-                    </Badge>
-                  </div>
-                  <CardTitle>{exp.title}</CardTitle>
-                  <CardDescription className="flex flex-col">
-                    <span>{exp.company}</span>
-                    <span className="text-xs">{exp.period}</span>
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="list-disc pl-5 space-y-1 text-sm text-muted-foreground mb-4">
-                    {exp.description.map((item, i) => (
-                      <li key={i}>{item}</li>
-                    ))}
-                  </ul>
-                  <div className="flex flex-wrap gap-2">
-                    {exp.skills.map((skill, i) => (
-                      <Badge key={i} variant="secondary" className="bg-primary/10 text-primary hover:bg-primary/20">
-                        {skill}
+                  <CardHeader className="pb-2">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-8 h-8 rounded-full bg-gradient-to-r from-primary/20 to-blue-500/20 flex items-center justify-center">
+                        <Briefcase className="h-5 w-5 text-primary" />
+                      </div>
+                      <Badge variant="outline" className="bg-blue-500/10 text-blue-500 border-blue-500/20">
+                        Work
                       </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+                    </div>
+                    <CardTitle>{exp.title}</CardTitle>
+                    <CardDescription className="flex flex-col">
+                      <span>{exp.company}</span>
+                      <span className="text-xs">{exp.period}</span>
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="list-disc pl-5 space-y-1 text-sm text-muted-foreground mb-4">
+                      {exp.description.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                    <div className="flex flex-wrap gap-2">
+                      {exp.skills.map((skill, i) => (
+                        <Badge key={i} variant="secondary" className="bg-primary/10 text-primary hover:bg-primary/20">
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="text-center mt-6 text-sm text-muted-foreground">
+            <span>Scroll horizontally to see more experiences</span>
+          </div>
         </div>
       </div>
 

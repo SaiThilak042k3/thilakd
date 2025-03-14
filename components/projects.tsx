@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import { motion } from "framer-motion"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -13,7 +12,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import { ChevronLeft, ChevronRight, ExternalLink, Github } from "lucide-react"
+import { ExternalLink, Github } from "lucide-react"
 
 const projects = [
   {
@@ -63,7 +62,7 @@ const projects = [
     id: "project3",
     title: "SAAVAAD",
     category: "Web Development",
-    image: "src/img/gallery/projects/SAAVAAD1.png",
+    image: "srcimg/gallery/projects/SAAVAAD1.png",
     tech: ["Node.js", "ML Models", "MongoDB", "React Native"],
     description: "A cross-platform mobile app for text summarization and language translation with ML models.",
     details: {
@@ -117,7 +116,7 @@ const projects = [
     id: "project6",
     title: "Resume Building",
     category: "Media",
-    image: "src/img/gallery/projects/resume.png0",
+    image: "src/img/gallery/projects/resume.png",
     tech: ["Canva", "Photoshop"],
     description: "Freelance resume creation and personal branding consultancy for job seekers.",
     details: {
@@ -135,22 +134,6 @@ const projects = [
 ]
 
 export default function Projects() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const itemsPerPage = 3
-  const totalPages = Math.ceil(projects.length / itemsPerPage)
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + itemsPerPage >= projects.length ? 0 : prevIndex + itemsPerPage))
-  }
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex - itemsPerPage < 0 ? projects.length - itemsPerPage : prevIndex - itemsPerPage,
-    )
-  }
-
-  const visibleProjects = projects.slice(currentIndex, currentIndex + itemsPerPage)
-
   return (
     <section id="projects" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -166,14 +149,15 @@ export default function Projects() {
         </motion.div>
 
         <div className="relative">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {visibleProjects.map((project, index) => (
+          <div className="flex overflow-x-auto hide-scrollbar gap-6 pb-4 pt-4">
+            {projects.map((project, index) => (
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex-shrink-0 w-80"
               >
                 <Card className="overflow-hidden h-full border-border hover:shadow-lg transition-all hover:-translate-y-1 group">
                   <div className="relative h-48 overflow-hidden">
@@ -287,16 +271,8 @@ export default function Projects() {
             ))}
           </div>
 
-          <div className="flex justify-center items-center mt-10 gap-4">
-            <Button variant="outline" size="icon" onClick={prevSlide} className="rounded-full">
-              <ChevronLeft className="h-5 w-5" />
-            </Button>
-            <div className="text-sm text-muted-foreground">
-              {Math.floor(currentIndex / itemsPerPage) + 1} / {totalPages}
-            </div>
-            <Button variant="outline" size="icon" onClick={nextSlide} className="rounded-full">
-              <ChevronRight className="h-5 w-5" />
-            </Button>
+          <div className="text-center mt-6 text-sm text-muted-foreground">
+            <span>Scroll horizontally to see more projects</span>
           </div>
         </div>
       </div>

@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
+import { Quote } from "lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Card, CardContent } from "@/components/ui/card"
 
 const testimonials = [
   {
@@ -26,7 +26,7 @@ const testimonials = [
   {
     id: 3,
     content:
-      "Thilak's video editing and YouTube management brought a whole new level of fun and engagement to our kids' content! His keen eye for detail and ability to organize playlists seamlessly made it easy for viewers to navigate and enjoy.",
+      "Thilak's video editing and YouTube management brought a whole new level of fun and engagement to our kids' content!",
     author: "Preethi",
     position: "State Youtube coordinator, Sri Sathya Sai Balvikas",
     avatar: "src/img/gallery/author/preethi.png",
@@ -37,7 +37,7 @@ const testimonials = [
   //     "Thilak was a huge help in shaping my resume! His advice on highlighting key skills and structuring it properly made a big difference. Thanks to him, I landed my role at Hexaware with confidence!",
   //   author: "Sai",
   //   position: "Service Desk Analyst, Hexaware, Chennai",
-  //   avatar: "src/img/gallery/author/sai.jpg",
+  //   avatar: "/placeholder.svg?height=100&width=100",
   // },
   // {
   //   id: 5,
@@ -45,7 +45,7 @@ const testimonials = [
   //     "I can't thank Thilak enough for his guidance on my resume. He made sure it was polished and job-ready, which played a huge role in me securing my job at State Street",
   //   author: "Priya Dharshiny",
   //   position: "Senior Data Analyst, StateStreet, Coimbatore",
-  //   avatar: "src/img/gallery/author/priya.jpg",
+  //   avatar: "/placeholder.svg?height=100&width=100",
   // },
 ]
 
@@ -70,66 +70,59 @@ export default function Testimonials() {
   }, [current])
 
   return (
-    <section id="testimonials" className="py-20 bg-background relative">
-      <div className="container mx-auto px-4">
+    <section id="testimonials" className="py-16 bg-background relative">
+      <div className="container max-w-4xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
-          <h2 className="section-heading gradient-text">Testimonials</h2>
-          <p className="section-subheading">What people say about working with me</p>
+          <h2 className="text-3xl font-bold mb-2 gradient-text">Testimonials</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">What people say about working with me</p>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="relative">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={current}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
-                className="testimonial-card"
-              >
-                <Quote className="h-12 w-12 text-primary/20 mb-6" />
-                <p className="testimonial-quote">"{testimonials[current].content}"</p>
-                <div className="testimonial-author">
-                  <Avatar className="testimonial-avatar">
-                    <AvatarImage src={testimonials[current].avatar} alt={testimonials[current].author} />
-                    <AvatarFallback>{testimonials[current].author.charAt(0)}</AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <h4 className="testimonial-name">{testimonials[current].author}</h4>
-                    <p className="testimonial-position">{testimonials[current].position}</p>
+        <div className="max-w-2xl mx-auto">
+          <Card className="border border-border shadow-sm hover-card">
+            <CardContent className="p-6">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={current}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Quote className="h-8 w-8 text-primary/20 mb-4" />
+                  <p className="text-base italic text-muted-foreground mb-4">"{testimonials[current].content}"</p>
+                  <div className="flex items-center">
+                    <Avatar className="h-10 w-10 mr-3">
+                      <AvatarImage src={testimonials[current].avatar} alt={testimonials[current].author} />
+                      <AvatarFallback>{testimonials[current].author.charAt(0)}</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <h4 className="font-medium text-sm">{testimonials[current].author}</h4>
+                      <p className="text-xs text-muted-foreground">{testimonials[current].position}</p>
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
+                </motion.div>
+              </AnimatePresence>
+            </CardContent>
+          </Card>
 
-            <div className="flex justify-between mt-8">
-              <Button variant="outline" size="icon" onClick={prev} className="rounded-full">
-                <ChevronLeft className="h-5 w-5" />
-              </Button>
-
-              <div className="flex space-x-2">
-                {testimonials.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrent(index)}
-                    className={`w-3 h-3 rounded-full transition-colors ${
-                      current === index ? "bg-gradient-to-r from-primary to-blue-500" : "bg-muted-foreground/30"
-                    }`}
-                    aria-label={`Go to testimonial ${index + 1}`}
-                  />
-                ))}
-              </div>
-
-              <Button variant="outline" size="icon" onClick={next} className="rounded-full">
-                <ChevronRight className="h-5 w-5" />
-              </Button>
+          <div className="flex justify-center mt-6">
+            <div className="flex space-x-2">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrent(index)}
+                  className={`w-2 h-2 rounded-full transition-colors ${
+                    current === index ? "bg-primary" : "bg-muted-foreground/30"
+                  }`}
+                  aria-label={`Go to testimonial ${index + 1}`}
+                />
+              ))}
             </div>
           </div>
         </div>

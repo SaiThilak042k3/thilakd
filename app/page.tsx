@@ -13,9 +13,8 @@ import Testimonials from "@/components/testimonials"
 import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 import HireMe from "@/components/hire-me"
-import Head from "next/head"
 import { Loader } from "@/components/loader"
-import { Analytics } from "@vercel/analytics/react"
+import Skills from "@/components/skills"
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
@@ -63,6 +62,31 @@ export default function Home() {
     }
   }, [])
 
+  // Prevent image right-click
+  useEffect(() => {
+    const preventImageCopy = (e) => {
+      if (e.target.tagName === "IMG") {
+        e.preventDefault()
+        alert("Images are protected and cannot be copied.")
+      }
+    }
+
+    // Prevent right-click on images
+    document.addEventListener("contextmenu", preventImageCopy)
+
+    // Prevent drag and drop of images
+    document.addEventListener("dragstart", (e) => {
+      if (e.target.tagName === "IMG") {
+        e.preventDefault()
+      }
+    })
+
+    return () => {
+      document.removeEventListener("contextmenu", preventImageCopy)
+      document.removeEventListener("dragstart", preventImageCopy)
+    }
+  }, [])
+
   // Simulate loading
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -81,9 +105,9 @@ export default function Home() {
 
       // Create different shapes
       const shapes = [
-        { type: "sphere", color: "bg-gradient-to-br from-primary/40 to-blue-500/40" },
-        { type: "cube", color: "bg-gradient-to-tr from-yellow-500/30 to-amber-500/30" },
-        { type: "pyramid", color: "bg-gradient-to-r from-purple-500/30 to-pink-500/30" },
+        { type: "sphere", color: "bg-gradient-to-br from-primary/40 to-accent/40" },
+        { type: "cube", color: "bg-gradient-to-tr from-secondary/30 to-accent/30" },
+        { type: "pyramid", color: "bg-gradient-to-r from-primary/30 to-accent/30" },
       ]
 
       // Add shapes to the container
@@ -114,22 +138,18 @@ export default function Home() {
   }
 
   return (
-    <div ref={containerRef} className="min-h-screen bg-background font-grotesk relative">
-      <Head>
-        <title>Thilak - AI Engineer & NLP Specialist</title>
-        <link rel="icon" href="src/img/favicon.ico"/>
-      </Head>
-
+    <div ref={containerRef} className="min-h-screen bg-background font-poppins relative">
       <motion.div className="progress-bar" style={{ scaleX: scrollYProgress }} />
 
       <Navbar />
-      <main>
+      <main className="max-w-7xl mx-auto">
         <Hero />
         <About />
+        <Skills />
         <Projects />
         <Experience />
-        <Gallery />
         <Timeline />
+        <Gallery />
         <Testimonials />
         <HireMe />
         <Contact />

@@ -88,7 +88,7 @@ export default function Hero() {
             >
               <Button asChild size="lg" className="rounded-full group">
                 <a
-                  href="https://drive.google.com/file/d/1Cwc5lEuHTYH8fgIm_D1DVSzpP6r4Ku8Q/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1bonjptgJA0XG8KP0gQahniODA3mvVEIw/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

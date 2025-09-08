@@ -117,7 +117,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: hsl(var(--primary) / 0.3);
+  background-color: hsl(var(--primary) / 0.8);
   mix-blend-mode: difference;
   pointer-events: none;
   z-index: 9999;
@@ -128,7 +128,7 @@
 .cursor-hover {
   width: 40px;
   height: 40px;
-  background-color: hsl(var(--primary) / 0.5);
+  background-color: hsl(var(--primary) / 1);
 }
 
 /* Progress bar */

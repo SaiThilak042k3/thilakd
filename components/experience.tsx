@@ -7,6 +7,34 @@ import { Briefcase } from "lucide-react"
 
 const experiences = [
   {
+    title: "AI Analyst",
+    company: "SAIMA Labs",
+    period: "May 2025 - Present",
+    type: "work",
+    description: [
+      "Designed an AI-powered dental health prediction model and automated WhatsApp-based patient engagement workflows for Dr. Hiremath Global Enterprises and Dr. Hiremath Hospitals.",
+      "Conducted an operational streamlining study at Sri Ramakrishna Mutt Dispensary, Chennai, improving patient care and overall workflow efficiency.",
+      "Developed a Risk Assessment Bot (RAS) for IFIA Bharat to evaluate startup investment potential, supporting both single and bulk CSV-based assessments.",
+      "Contributed to an AI-driven cardiac risk prediction model for CardioBionic MedTech, enhancing predictive healthcare analytics.",
+      "Designed and developed two live websites from scratch, handling end-to-end development, deployment, and scalability.",
+      "Led and mentored 5+ interns across multiple projects, guiding them in product development, website design, and implementation.",
+      "Created branding creatives and promotional videos for Junicron Innovations’ Dubai product launch (Feb 2026).",
+      "Prepared strategic pitch decks and investor presentations showcased at international MedTech conferences and forums."
+    ],
+    skills: [
+      "AI Solutions",
+      "NLP",
+      "Knowledge Graphs",
+      "RAG",
+      "Data Analytics",
+      "Predictive Modeling",
+      "Full-Stack Development",
+      "Automation",
+      "Power BI",
+      "Strategic Presentations"
+    ]
+  },
+  {
     title: "Data Analyst Intern",
     company: "TaskBench, SAIMA Labs",
     period: "May 2024 - June 2024",

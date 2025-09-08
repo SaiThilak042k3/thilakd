@@ -66,7 +66,7 @@ export default function About() {
               className="rounded-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 transition-all duration-300"
             >
               <a
-                href="https://drive.google.com/file/d/1Cwc5lEuHTYH8fgIm_D1DVSzpP6r4Ku8Q/view?usp=sharing"
+                href="https://drive.google.com/file/d/1bonjptgJA0XG8KP0gQahniODA3mvVEIw/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >

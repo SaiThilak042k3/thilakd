@@ -49,7 +49,7 @@ export default function HireMe() {
           </p>
           <Button asChild size="lg" variant="secondary" className="rounded-full group glow-md">
             <a
-              href="https://drive.google.com/file/d/1Cwc5lEuHTYH8fgIm_D1DVSzpP6r4Ku8Q/view?usp=sharing"
+              href="https://drive.google.com/file/d/1bonjptgJA0XG8KP0gQahniODA3mvVEIw/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >

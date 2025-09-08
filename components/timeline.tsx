@@ -5,8 +5,17 @@ import { motion, useScroll } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
 
 const timelineItems = [
+   {
+  date: "May 2025 - Present",
+    title: "AI Analyst",
+    organization: "SAIMA Labs",
+    tags: ["AI", "Healthcare", "Innovation"],
+    image: "src/img/gallery/timeline/SAIMA.png",
+    description:
+      "Working on AI-powered healthcare solutions, automation, and product development while leading multiple projects and mentoring interns.",
+  },
   {
-    date: "Feb. 2024 - Present",
+    date: "Feb. 2024 - April 2025",
     title: "President",
     organization: "Digital Enlightment Club, SSSIHL",
     tags: ["Microsoft", "Leadership"],
@@ -15,7 +24,7 @@ const timelineItems = [
       "Leading the Digital Enlightment Club to promote technology awareness and digital literacy among students.",
   },
   {
-    date: "Feb. 2024 - Present",
+    date: "Feb. 2024 - April 2025",
     title: "Member",
     organization: "Eco-Einstiens Club, SSSIHL",
     tags: ["Green Campus", "Leadership"],
@@ -24,7 +33,7 @@ const timelineItems = [
       "Co-founded the Eco-Einstiens Club to promote environmental awareness and sustainability initiatives on campus.",
   },
   {
-    date: "June 2023 - Present",
+    date: "June 2023 - May 2025",
     title: "MSc Data Science and Computing",
     organization: "Sri Sathya Sai Institute of Higher Learning",
     tags: ["AI", "ML"],

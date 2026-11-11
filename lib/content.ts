@@ -12,7 +12,7 @@ export const site = {
   phone: "+91 63695 02212",
   status: "Open to conversations about AI, and to freelance work on AI projects.",
   links: {
-    linkedin: "https://www.linkedin.com/in/thilak-d-129464205/",
+    linkedin: "https://www.linkedin.com/in/thilakdhandapani/",
     github: "https://github.com/SaiThilak042k3",
     cal: "https://cal.com/thilak-d",
     whatsapp: "https://wa.me/916369502212",

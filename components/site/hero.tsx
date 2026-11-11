@@ -1,11 +1,12 @@
 import Image from "next/image"
 import { hero, site } from "@/lib/content"
-import { ArrowRight, Download } from "./icons"
+import { ArrowRight, ArrowUpRight } from "./icons"
 
 const facts = [
   { k: "Now", v: hero.current },
   { k: "Based in", v: site.location },
   { k: "Published", v: "SAGE, ICCET 2025 (first author)" },
+  { k: "Open to", v: "Conversations about AI, and freelance AI projects" },
 ]
 
 export function Hero() {
@@ -35,8 +36,11 @@ export function Hero() {
         <div className="mt-12 grid animate-rise gap-8 border-t border-hairline pt-8 [animation-delay:380ms] md:mt-16 md:grid-cols-12 md:pt-10">
           <p className="max-w-prose text-lead text-mute text-pretty md:col-span-7">{hero.summary}</p>
           <div className="flex flex-wrap items-start gap-3 md:col-span-5 md:justify-end">
-            <a href={site.resume} target="_blank" rel="noopener" className="btn-primary">
-              Download résumé <Download width={16} height={16} />
+            <a href={site.resume} target="_blank" rel="noopener noreferrer" className="btn-primary">
+              Résumé <ArrowUpRight width={16} height={16} />
+            </a>
+            <a href={site.portfolio} target="_blank" rel="noopener noreferrer" className="btn border border-hairline hover:border-ink/40">
+              Portfolio <ArrowUpRight width={16} height={16} />
             </a>
             <a href="#contact" className="btn-ghost">
               Get in touch <ArrowRight width={16} height={16} />
@@ -44,7 +48,7 @@ export function Hero() {
           </div>
         </div>
 
-        <dl className="mt-12 grid animate-rise gap-6 [animation-delay:460ms] sm:grid-cols-3 md:mt-16">
+        <dl className="mt-12 grid animate-rise gap-6 [animation-delay:460ms] sm:grid-cols-2 md:mt-16 lg:grid-cols-4">
           {facts.map((f) => (
             <div key={f.k}>
               <dt className="eyebrow">{f.k}</dt>

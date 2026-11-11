@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og"
 
-export const alt = "Thilak D, AI Data Scientist in healthcare AI"
+export const alt = "Thilak D, Data Scientist and Chief of Staff"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
@@ -28,8 +28,8 @@ export default function OpengraphImage() {
           </div>
         </div>
         <div style={{ display: "flex", gap: 48, fontSize: 26, color: "#66666C" }}>
-          <span>AI Data Scientist</span>
-          <span>Healthcare AI · LLMs · Evaluation</span>
+          <span>Data Scientist and Chief of Staff</span>
+          <span>Healthcare AI</span>
           <span>Hyderabad</span>
         </div>
       </div>

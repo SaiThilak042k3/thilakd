@@ -4,7 +4,7 @@ import { m, useScroll, useSpring } from "framer-motion"
 import { useEffect, useState } from "react"
 import { nav, site } from "@/lib/content"
 import { cn } from "@/lib/utils"
-import { Close, Download, Menu } from "./icons"
+import { ArrowUpRight, Close, Menu } from "./icons"
 import { ThemeToggle } from "./theme-toggle"
 
 export function Nav() {
@@ -78,10 +78,10 @@ export function Nav() {
             <a
               href={site.resume}
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               className="ml-1 hidden h-9 items-center gap-1.5 rounded-full bg-ink px-4 text-sm font-medium text-canvas transition-opacity hover:opacity-85 sm:inline-flex"
             >
-              Résumé <Download width={15} height={15} />
+              Résumé <ArrowUpRight width={15} height={15} />
             </a>
             <button
               type="button"
@@ -125,15 +125,20 @@ export function Nav() {
               </li>
             ))}
           </ul>
-          <a
-            href={site.resume}
-            target="_blank"
-            rel="noopener"
-            tabIndex={open ? 0 : -1}
-            className="btn-primary mt-auto w-full"
-          >
-            Download résumé <Download width={16} height={16} />
-          </a>
+          <div className="mt-auto grid grid-cols-2 gap-3">
+            <a href={site.resume} target="_blank" rel="noopener noreferrer" tabIndex={open ? 0 : -1} className="btn-primary">
+              Résumé <ArrowUpRight width={16} height={16} />
+            </a>
+            <a
+              href={site.portfolio}
+              target="_blank"
+              rel="noopener noreferrer"
+              tabIndex={open ? 0 : -1}
+              className="btn border border-hairline"
+            >
+              Portfolio <ArrowUpRight width={16} height={16} />
+            </a>
+          </div>
         </nav>
       </div>
     </>

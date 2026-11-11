@@ -1,9 +1,10 @@
 import Image from "next/image"
 import { research } from "@/lib/content"
+import { ArrowUpRight, GitHub } from "./icons"
 import { Reveal } from "./reveal"
 import { SectionHead } from "./section"
 
-const { paper, projects } = research
+const { paper, projects, small } = research
 
 function Bars() {
   return (
@@ -66,7 +67,7 @@ export function Research() {
             </p>
           </Reveal>
           <Reveal className="lg:col-span-7" delay={0.1}>
-            <figure className="overflow-hidden rounded-[22px] bg-white p-3 ring-1 ring-hairline sm:p-5">
+            <figure data-protect className="overflow-hidden rounded-[22px] bg-white p-3 ring-1 ring-hairline sm:p-5">
               <Image
                 src={paper.image}
                 alt="SAGE architecture: document processing, ontology schema, knowledge graph and vector database feeding a fine-tuned LLM"
@@ -80,7 +81,7 @@ export function Research() {
           </Reveal>
         </article>
 
-        <div className="mt-24 grid gap-16 border-t border-hairline pt-16 md:grid-cols-2 md:gap-12">
+        <div className="mt-24 grid gap-16 border-t border-hairline pt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
           {projects.map((p, i) => (
             <Reveal key={p.title} delay={i * 0.08}>
               <p className="font-mono text-[0.8rem] text-mute">{p.meta}</p>
@@ -93,14 +94,43 @@ export function Research() {
                   src={p.video}
                   poster={p.poster}
                   controls
+                  controlsList="nodownload noplaybackrate"
+                  disablePictureInPicture
                   muted
                   playsInline
                   preload="none"
                   aria-label={`${p.title} demo recording`}
                 />
               ) : null}
+              {"image" in p && p.image ? (
+                <div data-protect className="mt-8 overflow-hidden rounded-[18px] bg-white ring-1 ring-hairline">
+                  <Image src={p.image.src} alt={p.image.alt} width={p.image.w} height={p.image.h} sizes="(min-width: 1024px) 360px, 100vw" className="h-auto w-full" />
+                </div>
+              ) : null}
+              {"link" in p && p.link ? (
+                <a href={p.link.href} target="_blank" rel="noopener noreferrer" className="link mt-5 inline-flex items-center gap-1.5 text-sm">
+                  <GitHub width={15} height={15} /> {p.link.label}
+                </a>
+              ) : null}
             </Reveal>
           ))}
+        </div>
+
+        <div className="mt-20">
+          <p className="eyebrow">Smaller projects</p>
+          <ul className="mt-6 grid gap-x-12 md:grid-cols-3">
+            {small.map((s) => (
+              <li key={s.title} className="border-t border-hairline">
+                <a href={s.href} target="_blank" rel="noopener noreferrer" className="group block py-6">
+                  <span className="flex items-center justify-between gap-4">
+                    <span className="text-lg font-semibold transition-colors group-hover:text-accent">{s.title}</span>
+                    <ArrowUpRight className="shrink-0 text-mute transition-all duration-300 ease-apple group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent" />
+                  </span>
+                  <span className="mt-2 block text-[0.95rem] text-mute text-pretty">{s.body}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

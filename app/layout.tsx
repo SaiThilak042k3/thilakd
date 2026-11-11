@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google"
+import { MediaGuard } from "@/components/site/media-guard"
 import { ThemeProvider } from "@/components/site/theme-provider"
 import { site } from "@/lib/content"
 import "./globals.css"
@@ -14,7 +15,7 @@ const serif = Instrument_Serif({
   display: "swap",
 })
 
-const title = `${site.name} · ${site.role}, Healthcare AI`
+const title = `${site.name} · ${site.role}`
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   description: site.description,
   authors: [{ name: site.name, url: site.url }],
   creator: site.name,
-  keywords: ["Thilak D", "AI data scientist", "healthcare AI", "LLM evaluation", "medical ASR", "knowledge graphs", "RAG", "Hyderabad"],
+  keywords: ["Thilak D", "data scientist", "chief of staff", "AI data scientist", "healthcare AI", "LLM evaluation", "medical ASR", "knowledge graphs", "RAG", "Hyderabad"],
   alternates: { canonical: "/" },
   openGraph: {
     type: "profile",
@@ -51,7 +52,7 @@ const personJsonLd = {
   "@type": "Person",
   name: site.name,
   url: site.url,
-  jobTitle: site.role,
+  jobTitle: ["Data Scientist", "Chief of Staff (Data Science and AI)"],
   worksFor: { "@type": "Organization", name: "Mondee Tech Private Limited" },
   alumniOf: [
     { "@type": "CollegeOrUniversity", name: "Sri Sathya Sai Institute of Higher Learning" },
@@ -59,7 +60,7 @@ const personJsonLd = {
   ],
   address: { "@type": "PostalAddress", addressLocality: "Hyderabad", addressCountry: "IN" },
   sameAs: [site.links.linkedin, site.links.github],
-  knowsAbout: ["Healthcare AI", "LLM evaluation", "Speech recognition", "Knowledge graphs", "Retrieval-augmented generation"],
+  knowsAbout: ["Healthcare AI", "LLM evaluation", "Speech recognition", "Knowledge graphs", "Retrieval-augmented generation", "CDSCO regulation", "Financial modelling"],
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -72,6 +73,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
+          <MediaGuard />
         </ThemeProvider>
         <script
           type="application/ld+json"

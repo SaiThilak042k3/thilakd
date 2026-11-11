@@ -15,7 +15,7 @@ export function About() {
             </>
           }
         />
-        <div className="mt-14 grid gap-x-10 gap-y-12 sm:grid-cols-2 md:mt-20 lg:grid-cols-4">
+        <div className="mt-14 grid gap-x-10 gap-y-12 sm:grid-cols-2 md:mt-20 lg:grid-cols-3">
           {capabilities.map((c, i) => (
             <Reveal key={c.group} delay={i * 0.06}>
               <h3 className="border-t border-ink pt-4 text-sm font-semibold">{c.group}</h3>
@@ -57,7 +57,7 @@ export function About() {
           <Reveal>
             <p className="eyebrow">Recognition</p>
             <h2 className="mt-5 max-w-3xl text-h3 font-semibold text-balance">
-              Three international stages, a national ranking and a few things I led along the way.
+              Conferences on three countries’ stages, a national ranking, and the things I led along the way.
             </h2>
           </Reveal>
           <div className="mt-12 grid gap-x-12 gap-y-14 md:grid-cols-2">

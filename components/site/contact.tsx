@@ -20,10 +20,15 @@ export function Contact() {
           <h2 className="mt-5 text-display font-semibold">
             Let’s <span className="font-serif text-[1.08em] font-normal italic tracking-[-0.02em] text-accent">talk.</span>
           </h2>
-          <p className="mt-8 max-w-prose text-lead text-mute text-pretty">
-            About healthcare AI, evaluation, or turning a promising model into something a hospital will actually use. I reply to every
-            message.
-          </p>
+          <p className="mt-8 max-w-prose text-lead text-mute text-pretty">{site.status}</p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a href={site.resume} target="_blank" rel="noopener noreferrer" className="btn-primary">
+              Résumé <ArrowUpRight width={16} height={16} />
+            </a>
+            <a href={site.portfolio} target="_blank" rel="noopener noreferrer" className="btn border border-hairline hover:border-ink/40">
+              Full portfolio <ArrowUpRight width={16} height={16} />
+            </a>
+          </div>
         </Reveal>
 
         <div className="mt-14 grid grid-cols-1 gap-10 md:mt-20 lg:grid-cols-12 lg:gap-14">

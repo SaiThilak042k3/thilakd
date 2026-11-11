@@ -1,90 +1,85 @@
-import type React from "react"
-import "@/app/globals.css"
-import { Poppins } from "next/font/google"
-import { ThemeProvider } from "@/components/theme-provider"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
+import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google"
+import { MediaGuard } from "@/components/site/media-guard"
+import { ThemeProvider } from "@/components/site/theme-provider"
+import { site } from "@/lib/content"
+import "./globals.css"
 
-const poppins = Poppins({
-  weight: ["300", "400", "500", "600", "700"],
+const sans = Geist({ subsets: ["latin"], variable: "--font-geist-sans", display: "swap" })
+const mono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono", display: "swap", preload: false })
+const serif = Instrument_Serif({
+  weight: "400",
+  style: ["normal", "italic"],
   subsets: ["latin"],
-  variable: "--font-poppins",
+  variable: "--font-serif",
+  display: "swap",
 })
 
+const title = `${site.name} · ${site.role}`
+
 export const metadata: Metadata = {
-  title: "Thilak - AI Engineer & NLP Specialist",
-  description: "Personal portfolio of Thilak, an AI Engineer and NLP Specialist",
-  authors: [{ name: "Thilak" }],
-  creator: "Thilak",
-  publisher: "Thilak",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL("https://thilakd.vercel.app/"),
+  metadataBase: new URL(site.url),
+  title: { default: title, template: `%s · ${site.name}` },
+  description: site.description,
+  authors: [{ name: site.name, url: site.url }],
+  creator: site.name,
+  keywords: ["Thilak D", "data scientist", "chief of staff", "AI data scientist", "healthcare AI", "LLM evaluation", "medical ASR", "knowledge graphs", "RAG", "Hyderabad"],
+  alternates: { canonical: "/" },
   openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://thilakd.vercel.app/",
-    title: "Thilak - AI Engineer & NLP Specialist",
-    description: "Personal portfolio of Thilak, an AI Engineer and NLP Specialist",
-    siteName: "Thilak Portfolio",
+    type: "profile",
+    locale: "en_IN",
+    url: site.url,
+    siteName: site.name,
+    title,
+    description: site.description,
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Thilak - AI Engineer & NLP Specialist",
-    description: "Personal portfolio of Thilak, an AI Engineer and NLP Specialist",
-    creator: "@thilak",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  icons: {
-    icon: "/src/img/favicon.ico",
-    apple: "src/img/Passport_Photograph.jpg",
-  },
-  verification: {
-    google: "verification_token",
-  },
-    generator: 'v0.dev'
+  twitter: { card: "summary_large_image", title, description: site.description },
+  robots: { index: true, follow: true },
+  formatDetection: { telephone: false, email: false, address: false },
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#FBFBFA" },
+    { media: "(prefers-color-scheme: dark)", color: "#0B0B0C" },
+  ],
+}
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: site.name,
+  url: site.url,
+  jobTitle: ["Data Scientist", "Chief of Staff (Data Science and AI)"],
+  worksFor: { "@type": "Organization", name: "Mondee Tech Private Limited" },
+  alumniOf: [
+    { "@type": "CollegeOrUniversity", name: "Sri Sathya Sai Institute of Higher Learning" },
+    { "@type": "CollegeOrUniversity", name: "BITS Pilani" },
+  ],
+  address: { "@type": "PostalAddress", addressLocality: "Hyderabad", addressCountry: "IN" },
+  sameAs: [site.links.linkedin, site.links.github],
+  knowsAbout: ["Healthcare AI", "LLM evaluation", "Speech recognition", "Knowledge graphs", "Retrieval-augmented generation", "CDSCO regulation", "Financial modelling"],
+}
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        {/* CSP Meta Tag */}
-        <meta
-          httpEquiv="Content-Security-Policy"
-          content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://maps.googleapis.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https:; frame-src https://www.google.com/maps/;"
-        />
-        {/* Security Headers */}
-        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-        <meta httpEquiv="X-Frame-Options" content="SAMEORIGIN" />
-        <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-        <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </head>
-      <body className={`${poppins.variable} font-poppins`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${sans.variable} ${mono.variable} ${serif.variable}`}
+    >
+      <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           {children}
+          <MediaGuard />
         </ThemeProvider>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
       </body>
     </html>
   )
 }
-
-
-
-import './globals.css'
